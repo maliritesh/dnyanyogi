@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixelated Reveal Carousel</title>
+  <style>
+    /* General Styling */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #222;
+    }
+
+    .carousel {
+      position: relative;
+      width: 90%;
+      max-width: 800px;
+      height: 500px;
+      overflow: hidden;
+      background: #333;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    /* Pixelated Overlay Effect */
+    .pixel-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(10, 1fr); /* Adjust columns for pixel density */
+      grid-template-rows: repeat(10, 1fr); /* Adjust rows for pixel density */
+      pointer-events: none;
+    }
+
+    .pixel-box {
+      background-color: #222;
+      opacity: 1;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    /* Fade-in animation for each box */
+    @keyframes fadeIn {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="carousel" id="carousel">
+    <img src="images/1.jpeg" alt="Library Image 1" id="carouselImage">
+    <div class="pixel-overlay" id="pixelOverlay"></div>
+  </div>
+
+  <script>
+    const images = [
+      "images/1.jpeg",
+      "images/2.jpeg",
+      "images/3.jpeg"
+    ];
+
+    let currentIndex = 0;
+
+    function createPixelOverlay() {
+      const overlay = document.getElementById("pixelOverlay");
+      overlay.innerHTML = ""; // Clear existing boxes
+
+      const rows = 10;
+      const cols = 10;
+      const totalBoxes = rows * cols;
+      for (let i = 0; i < totalBoxes; i++) {
+        const box = document.createElement("div");
+        box.classList.add("pixel-box");
+        
+        // Set animation delay to create a cascading effect
+        const delay = (i % cols + Math.floor(i / cols) * 0.1) * 0.05;
+        box.style.animationDelay = `${delay}s`;
+        
+        overlay.appendChild(box);
+      }
+    }
+
+    function showNextImage() {
+      const carouselImage = document.getElementById("carouselImage");
+      currentIndex = (currentIndex + 1) % images.length;
+      carouselImage.src = images[currentIndex];
+
+      createPixelOverlay();
+    }
+
+    // Initialize the overlay on page load
+    createPixelOverlay();
+    setInterval(showNextImage, 5000); // Change image every 5 seconds
+  </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f55c16;
+    color: white;
+    width: 100%;
+  }
+
+  /* Left: Logo */
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 200px;
+    height: 60px;
+    margin-right: 10px;
+  }
+
+  /* Right: Contact Information and Date/Time */
+  .contact-info {
+    text-align: right;
+    font-size: 16px;
+  }
+
+  .contact-info p {
+    margin: 0;
+  }
+
+  /* Make the links bolder and white */
+  a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+  }
+
+  /* Make links stand out on hover */
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* Mobile View Adjustments */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .logo img {
+      width: 150px;
+      height: 45px;
+    }
+
+    .contact-info {
+      margin-top: 10px;
+    }
+  }

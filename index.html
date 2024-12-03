@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dnyanyogi Granthalay</title>
+    <link rel="stylesheet" href="css/main_page.css" />
+    <link rel="stylesheet" href="css/pages_about.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/librarian.css" />
+    <link rel="stylesheet" href="css/library_services.css" />
+    <link rel="stylesheet" href="css/chatgpt.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
+    <link rel="stylesheet" href="css/competative.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- College Name -->
+    <header>
+      <!-- Left: Logo -->
+      <div class="logo">
+        <img src="images/logo-library.png" alt="Logo" />
+      </div>
+  
+      <!-- Right: Contact Information and Date/Time -->
+      <div class="contact-info">
+        <p>
+          <strong>Email: </strong>
+          <a href="mailto:contact@dnyanyogigranthalay.com">contact@dnyanyogigranthalay.com</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+          <strong>Phone: </strong>
+          <a href="tel:+1234567890">7676817726</a>
+        </p><br>
+        <p style="color: #0a4e7b; font-weight:bolder;" id="date-time"></p> <!-- This is where the date and time will show up -->
+      </div>
+    </header>
+  
+    <nav class="navbar">
+      <!-- Hamburger Icon -->
+      <div class="navbar-toggle" id="navbar-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+  
+      <ul class="navbar-links" id="navbar-links">
+        <li><a href="#carousel"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fas fa-info-circle"></i> About Library</a></li>
+        <li><a href="#library-services"><i class="fas fa-cogs"></i> Library Services</a></li>
+        <li><a href="#competitive-exams"><i class="fas fa-graduation-cap"></i> Competitive Exams</a></li>
+        <li><a href="#librarian"><i class="fas fa-user-tie"></i> Librarian</a></li>
+        <li><a href="#digital-hub"><i class="fas fa-laptop"></i> Digital Hub</a></li>
+        <li><a href="#gallery"><i class="fas fa-image"></i> Photo Gallery</a></li>
+      </ul>
+    </nav>
+  
+    <!-- Image Carousel -->
+    <section id="carousel">
+      <div class="carousel" id="carousel">
+        <img
+          src="images/slider-1.jpg"
+          alt="Library Image 1"
+          id="carouselImage"
+        />
+        <div class="pixel-overlay" id="pixelOverlay"></div>
+      </div>
+    </section>
+
+    <section id="digital-hub">
+      <h2><i class="fas fa-book"></i> Digital Hub</h2>
+      <!-- Resource Icons Section -->
+      <div class="resource-icons">
+        <div class="resource-item">
+          <img
+            src="images/question2.png"
+            alt="Question Paper"
+            class="resource-image"
+           onclick="openBA()"
+          />
+          <p>Question Bank</p>
+        </div>   
+
+        <!-- Newspaper Item with Sub-Icons -->
+        <div class="resource-item">
+          <img
+            src="images/pro.jpeg"
+            alt="Question Paper"
+            class="resource-image"
+             onclick="openModal('modal4')"
+          />
+          <!-- <i class="fas fa-newspaper" onclick="openModal()"></i> -->
+          <p>Prospectus</p>
+        </div>
+
+        <div class="resource-item">
+          <img
+            src="images/institute.jpeg"
+            alt="Question Paper"
+            class="resource-image"
+          />
+          <p>Institutional Repository</p>
+        </div>
+        <div class="resource-item">
+          <img
+            src="images/you.jpeg"
+            alt="Question Paper"
+            class="resource-image"
+          />
+          <p>YouTube</p>
+        </div>
+        <div class="resource-item">
+          <img
+            src="images/e-learn.jpeg"
+            alt="Question Paper"
+            class="resource-image"
+             onclick="openModal('modal6')"
+          />
+          <p>e - Learning</p>
+        </div>
+
+        <div class="resource-item">
+          <img
+            src="images/book5.jpeg"
+            alt="Question Paper"
+            class="resource-image"
+            onclick="openModal('modal7')"
+          />
+          <p>e - Books</p>
+        </div>
+        <div class="resource-item">
+          <img
+            src="images/jour3.jpeg"
+            alt="Question Paper"
+            class="resource-image"
+            onclick="openModal('modal8')"
+          />
+          <p>e - Journals</p>
+        </div>
+        <div class="resource-item">
+          <img
+            src="images/news1.png"
+            alt="Question Paper"
+            class="resource-image"
+            onclick="openModal('modal5')" 
+          />
+          <p>e - News Papers</p>
+        </div>
+
+        <div class="resource-item">
+          <img
+            src="images/magzin.jpeg"
+            alt="Question Paper"
+            class="resource-image"
+            onclick="openModal('modal9')" 
+          />
+          <p>e - Magazine</p>
+        </div>
+        <div class="resource-item">
+          <img
+            src="images/govt1.jpg"
+            alt="Question Paper"
+            class="resource-image"
+            onclick="openModal('modal10')" 
+          />
+          <p>Govt. Official Sites</p>
+        </div>
+        <div class="resource-item">
+          <img
+            src="images/competat.jpeg"
+            alt="Question Paper"
+            class="resource-image"
+            onclick="openModal('modal11')" 
+          />
+          <p>Competitive Exams</p>
+        </div>
+        <div class="resource-item">
+          <img
+            src="images/elibrary.jpeg"
+            alt="Question Paper"
+            class="resource-image"
+           onclick="openEdictionary()"
+          />
+          <p>e-Dictionary</p>
+        </div>
+        <div class="resource-item">
+          <img
+            src="images/higher.png"
+            alt="Question Paper"
+            class="resource-image"
+            onclick="openModal('modal12')" 
+          />
+          <p>Higher Studies</p>
+        </div>
+        <div class="resource-item">
+          <img
+            src="images/s4.jpeg"
+            alt="Question Paper"
+            class="resource-image"
+            onclick="openModal('modal13')" 
+          />
+          <p>Student Corner</p>
+        </div>
+      </div>
+    </section>
+
+    <div id="modal4" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal4')">&times;</span>
+        <div class="card-container2">
+          <div class="card2">
+            <div><h4>2021-22</h4></div>
+          </div>
+          <div class="card2">
+            <h4>2022-23</h4>
+          </div>
+          <div class="card2">
+            <h4>2023-24</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal5" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal5')">&times;</span>
+        <h3>News-Paper</h3>
+        <div class="card-container">
+          <div class="card3" onclick="openKannada()">
+          <img src="digital_images/Kannada.webp" class="im" />
+          </div>
+          <div class="card3" onclick="openNews18()">
+            <img src="digital_images/News18.webp"  class="im"/>
+          </div>
+          <div class="card3" onclick="openHosa()">
+            <img src="digital_images/Hosa.webp" class="im"/>
+          </div>
+          <div class="card3" onclick="openDailyhunt()">
+            <img src="digital_images/Dailyhunt.webp" class="im"/>
+          </div>
+          <div class="card3" onclick="openPrajavani()">
+            <img src="digital_images/Praja.webp" class="im"/>
+          </div>
+          <div class="card3" onclick="openUday()">
+            <img src="digital_images/uday.webp" class="im"/>
+          </div>
+          <div class="card3" onclick="openSanje()">
+            <img src="digital_images/sanje.webp" class="im"/>
+          </div>
+          <div class="card3" onclick="openDeccan()">
+            <img src="digital_images/deccan.webp" class="im"/>
+          </div>
+          <!-- Add more cards as needed -->
+        </div>
+          <!-- Add more newspaper items here if needed -->
+        </div>
+      </div>
+    </div>
+
+    <div id="modal6" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal6')">&times;</span>
+        <h3>e-Learning</h3>
+        <div class="card-container">
+          <div class="card3" onclick="openLearn1()">
+          <img src="digital_images/elearn1.jpg" class="im1" />
+          </div>
+          <div class="card3" onclick="openLearn2()">
+            <img src="digital_images/elearn3.jpg"  class="im1"/>
+          </div>
+          <div class="card3" onclick="openLearn3()">
+            <img src="digital_images/elearn4.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openLearn4()">
+            <img src="digital_images/elearn7.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openLearn5()">
+            <img src="digital_images/elearn8.jpg" class="im1"/>
+          </div>
+          <div class="card3"onclick="openLearn6()">
+            <img src="digital_images/elearn9.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openLearn7()">
+            <img src="digital_images/elearn10.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openLearn8()">
+            <img src="digital_images/elearn11.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openLearn9()">
+            <img src="digital_images/elearn12.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openLearn10()">
+            <img src="digital_images/elearn5.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openLearn11()">
+            <img src="digital_images/elearn6.jpg" class="im1"/>
+          </div>
+        </div>
+          <!-- Add more newspaper items here if needed -->
+        </div>
+      </div>
+    </div>
+
+    <div id="modal7" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal7')">&times;</span>
+        <h3>e-Books</h3>
+        <div class="card-container">
+          <div class="card3" onclick="openEbook1()">
+          <img src="digital_images/ebook2.jpg" class="im1" />
+          </div>
+          <div class="card3" onclick="openEbook2()">
+            <img src="digital_images/ebook3.jpg"  class="im1"/>
+          </div>
+          <div class="card3" onclick="openEbook3()">
+            <img src="digital_images/ebook5.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openEbook4()">
+            <img src="digital_images/ebook6.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openEbook5()">
+            <img src="digital_images/ebook7.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openEbook6()">
+            <img src="digital_images/ebook8.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openEbook7()">
+            <img src="digital_images/ebook4.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openEbook8()">
+            <img src="digital_images/ebook9.jpg" class="im1"/>
+          </div>
+          <!-- Add more cards as needed -->
+        </div>
+          <!-- Add more newspaper items here if needed -->
+        </div>
+      </div>
+    </div>
+
+    <div id="modal8" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal8')">&times;</span>
+        <h3>e-Journal</h3>
+        <div class="card-container">
+          <div class="card3" onclick="openEjournal1()">
+          <img src="digital_images/ejournal1.jpg" class="im1" />
+          </div>
+          <div class="card3" onclick="openEjournal2()">
+            <img src="digital_images/ejournal2.jpg"  class="im1"/>
+          </div>
+          <div class="card3" onclick="openEjournal3()">
+            <img src="digital_images/ejournal3.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openEjournal4()">
+            <img src="digital_images/ejournal4.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openEjournal5()">
+            <img src="digital_images/ejournal5.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openEjournal6()">
+            <img src="digital_images/ejournal6.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openEjournal7()">
+            <img src="digital_images/ejournal7.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openEjournal8()">
+            <img src="digital_images/ejournal8.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openEjournal9()">
+            <img src="digital_images/ejournal9.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openEjournal10()">
+            <img src="digital_images/ejournal10.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openEjournal11()">
+            <img src="digital_images/ejournal11.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openEjournal12()">
+            <img src="digital_images/ejournal12.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openEjournal13()">
+            <img src="digital_images/ejournal13.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openEjournal14()">
+            <img src="digital_images/ejournal14.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openEjournal15()">
+            <img src="digital_images/ejournal15.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openEjournal16()">
+            <img src="digital_images/ejournal16.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openEjournal17()">
+            <img src="digital_images/ejournal17.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openEjournal18()">
+            <img src="digital_images/ejournal18.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openEjournal19()">
+            <img src="digital_images/ejournal19.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openEjournal20()">
+            <img src="digital_images/ejournal20.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openEjournal21()">
+            <img src="digital_images/ejournal21.jpg" class="im1"/>
+          </div>
+        </div>
+          <!-- Add more newspaper items here if needed -->
+        </div>
+      </div>
+    </div>
+
+    <div id="modal9" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal9')">&times;</span>
+        <h3>e-Magazine</h3>
+        <div class="card-container">
+          <div class="card3" onclick="openMagzine1()">
+          <img src="digital_images/magzin1 (1).jpg" class="im1" />
+          </div>
+          <div class="card3" onclick="openMagzine2()">
+            <img src="digital_images/m2.jpg"  class="im1"/>
+          </div>
+          <div class="card3" onclick="openMagzine3()">
+            <img src="digital_images/m3.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openMagzine4()">
+            <img src="digital_images/m4.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openMagzine5()">
+            <img src="digital_images/m5.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openMagzine6()">
+            <img src="digital_images/m6.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openMagzine7()">
+            <img src="digital_images/m7.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openMagzine8()">
+            <img src="digital_images/m8.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openMagzine9()">
+            <img src="digital_images/m9.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openMagzine10()">
+            <img src="digital_images/m10.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openMagzine11()">
+            <img src="digital_images/m11.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openMagzine12()">
+            <img src="digital_images/m12 (1).jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openMagzine13()">
+            <img src="digital_images/m13 (1).jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openMagzine14()">
+            <img src="digital_images/m14 (1).jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openMagzine15()">
+            <img src="digital_images/m16.jpg" class="im1"/>
+          </div>
+          <div class="card3" onclick="openMagzine16()">
+            <img src="digital_images/m17.jpg" class="im1"/>
+          </div>
+        </div>
+          <!-- Add more newspaper items here if needed -->
+        </div>
+      </div>
+    </div>
+
+<!-- Goverment websites -->
+<div id="modal10" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal10')">&times;</span>
+    <div class="card-container2">
+      <!-- Table with 3 columns and border -->
+      <table class="bordered-table">
+        <thead>
+          <tr >
+            <th colspan="3">GOVERNMENT OF INDIA WEB DIRECTORY</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td onclick="openPMO()">PMO TWITTER</td>
+            <td onclick="openPOI()">PRESIDENT OF INDIA</td>
+            <td onclick="openVOI()">VICEPRECIDENT OF INDIA</td>
+          </tr>
+          <tr>
+            <td onclick="openMIN()">MINISTRIES</td>
+            <td onclick="openPMOFFICE()">PRIME MINISTERS OFFICE</td>
+            <td onclick="openDEPRT()">DEPARTMENTS</td>
+          </tr>
+        </tbody>
+        <thead>
+          <tr >
+            <th colspan="3">LEGISLATURE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td onclick="openPOAI()">PARLIMENT OF INDIA</td>
+            <td onclick="openRS()">RAJYA SABHA</td>
+            <td onclick="openLS()">LOK SABHA</td>
+          </tr>
+          <tr>
+            <td onclick="openSLA()">STATE LEGISLATIVE ASSEMBLY</td>
+            <td onclick="openSLC()">STATE LEGISLATIVE COUNCILS</td>
+            <td onclick="openOthers()">OTHERS(LEGISLATIVE)</td>
+          </tr>
+        </tbody>
+        <thead>
+          <tr >
+            <th colspan="3">JUDICIARY</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td onclick="openSCOI()">SUPREME COURT OF INDIA</td>
+            <td onclick="openHC()">HIGH COURTS</td>
+            <td onclick="openDC()">DISTRICT COURTS</td>
+          </tr>
+         
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Competative Exams -->
+<div id="modal11" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal11')">&times;</span>
+    <div class="card-container2">
+      <!-- Table with 3 columns and border -->
+      <table class="bordered-table">
+        <thead>
+          <tr >
+            <th colspan="3">COMPETATIVE EXAMS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td onclick="openIAS()">IAS</td>
+            <td onclick="openIPS()">IPS</td>
+            <td onclick="openKPSC()">KPSC</td>
+          </tr>
+          <tr>
+            <td onclick="openBANK()">BANK EXAMS</td>
+            <td onclick="openNET()">NET EXAMS</td>
+            <td onclick="openRAIL()">RAILWAY EXAMS</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Higher Studies -->
+<div id="modal12" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal12')">&times;</span>
+    <div class="card-container2">
+      <!-- Table with 3 columns and border -->
+      <table class="bordered-table">
+        <thead>
+          <tr >
+            <th colspan="3">Educational Websites</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td onclick="openDelhi()">UGC, New Delhi</td>
+            <td onclick="openKSOU()">Karnataka State Open University</td>
+            <td onclick="openDU()">Davangere University</td>
+          </tr>
+          <tr>
+            <td onclick="openKU()">Kuvempu University</td>
+            <td onclick="openRCU()">Rani Channamma University, Belgavi</td>
+            <td onclick="openUM()">University Of Mysuru</td>
+          </tr>
+          <tr>
+            <td onclick="openKUH()">Kannada University, Hampi</td>
+            <td onclick="openBU()">Banglore University</td>
+            <td onclick="openMU()">Manglore University</td>
+          </tr>
+          <tr>
+            <td onclick="openKUD()">Karnataka University, Dharwad</td>
+            <td onclick="openKSLU()">Karnataka State Law, University</td>
+            <td onclick="openTU()">Tumkur University, Tumkur</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Student Corner -->
+<div id="modal13" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal13')">&times;</span>
+    <h3>Student Corner</h3>
+    <div class="card-container">
+      <div class="card3" onclick="openUUCMS()">
+      <img src="digital_images/UUCMS.jpg" class="im1" />
+      </div>
+      <div class="card3" onclick="openDCE()">
+        <img src="digital_images/DCE.jpg" style="height: 30px;"  class="im1"/>
+      </div>
+      <div class="card3" onclick="openDIGI()">
+        <img src="digital_images/DigiLocker.jpg" class="im1"/>
+      </div>
+      <div class="card3" onclick="openDL()">
+        <img src="digital_images/Digital_Library.jpg" class="im1"/>
+      </div>
+      <div class="card3" onclick="openLE()">
+        <img src="digital_images/Learn_English.jpg" class="im1"/>
+      </div>
+      <div class="card3" onclick="openRB()">
+        <img src="digital_images/Resume_Building.jpg" class="im1"/>
+      </div>
+      <div class="card3" onclick="openFI()">
+        <img src="digital_images/Face_Interview.jpg" class="im1"/>
+      </div>
+    </div>
+      <!-- Add more newspaper items here if needed -->
+    </div>
+  </div>
+</div>
+
+    <!-- About Us Section -->
+    <section id="about">
+      <h2>About Us</h2>
+
+      <div class="para-card">
+        <div class="icon-column">
+          <span class="check-icon">✔️</span>
+        </div>
+        <div class="content-column">
+          <div class="para">
+            Our Library is not only a storehouse of books, but it also provides
+            internet, e-books, and digital facilities. The library is fully
+            furnished with automation, and there is a Digital Display for the
+            notice board.
+          </div>
+        </div>
+      </div>
+
+      <div class="para-card">
+        <div class="icon-column">
+          <span class="check-icon">✔️</span>
+        </div>
+        <div class="content-column">
+          <div class="para">
+            The Reading Room receives leading dailies in English, Kannada,
+            Marathi, and Hindi. Many standard journals, both of general interest
+            and in specialized areas, are being subscribed to.
+          </div>
+        </div>
+      </div>
+      <br />
+      <h3 style="color: red; font-weight: bolder">Library Information</h3>
+      <br />
+      <strong style="color: blue">No of Books:</strong>
+      <span style="font-weight: bolder">040406 (28-02-2015)</span><br /><br />
+      <strong style="color: blue">No of Titles:</strong>
+      <span style="font-weight: bolder">13067</span><br /><br />
+      <strong style="color: blue">CDs:</strong>
+      <span style="font-weight: bolder">67</span><br /><br />
+
+      <strong style="color: blue">Library Working Hours:</strong> 08 AM to 5.30
+      PM (Monday to Saturday)<br /><br />
+      <strong style="color: blue">Holidays:</strong> Sunday and Government
+      Public Holidays<br /><br />
+
+      <strong style="color: blue">Collection of Books:</strong> Textbooks,
+      Reference Books: Encyclopedias, Dictionaries, Maps, Year Books, Career
+      Development Books, Competitive Guidance Books.<br />
+      <br />
+      <h4>News papers- 11</h4>
+      <div class="card-deck">
+        <!-- English Card -->
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">English</h5>
+            <p class="card-text">02</p>
+          </div>
+        </div>
+        <!-- Kannada Card -->
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Kannada</h5>
+            <p class="card-text">07</p>
+          </div>
+        </div>
+        <!-- Marathi Card -->
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Marathi</h5>
+            <p class="card-text">02</p>
+          </div>
+        </div>
+        <!-- Hindi Card -->
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Hindi</h5>
+            <p class="card-text">02</p>
+          </div>
+        </div>
+      </div>
+
+      <h4>Periodicals- 43</h4>
+
+      <div class="card-deck">
+        <!-- English Card -->
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">English</h5>
+            <p class="card-text">21</p>
+          </div>
+        </div>
+        <!-- Kannada Card -->
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Kannada</h5>
+            <p class="card-text">17</p>
+          </div>
+        </div>
+        <!-- Marathi Card -->
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Marathi</h5>
+            <p class="card-text">03</p>
+          </div>
+        </div>
+        <!-- Hindi Card -->
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Hindi</h5>
+            <p class="card-text">02</p>
+          </div>
+        </div>
+      </div>
+
+      <h4>Journals- 24</h4>
+
+      <div class="card-deck">
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Monthly</h5>
+            <p class="card-text">13</p>
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Fortnightly</h5>
+            <p class="card-text">01</p>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Bimonthly</h5>
+            <p class="card-text">01</p>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Half Yearly</h5>
+            <p class="card-text">04</p>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Quarterly</h5>
+            <p class="card-text">04</p>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Weekly</h5>
+            <p class="card-text">01</p>
+          </div>
+        </div>
+      </div>
+      <br />
+      <h3 style="color: red; font-weight: bolder">Services</h3>
+      <div class="para-card">
+        <div class="icon-column">
+          <span class="check-icon">✔️</span>
+        </div>
+        <div class="content-column">
+          <div class="para">Book Circulation</div>
+        </div>
+      </div>
+      <div class="para-card">
+        <div class="icon-column">
+          <span class="check-icon">✔️</span>
+        </div>
+        <div class="content-column">
+          <div class="para">Reference Service</div>
+        </div>
+      </div>
+      <div class="para-card">
+        <div class="icon-column">
+          <span class="check-icon">✔️</span>
+        </div>
+        <div class="content-column">
+          <div class="para">Current Awareness Service</div>
+        </div>
+      </div>
+      <div class="para-card">
+        <div class="icon-column">
+          <span class="check-icon">✔️</span>
+        </div>
+        <div class="content-column">
+          <div class="para">Reprography Service</div>
+        </div>
+      </div>
+      <div class="para-card">
+        <div class="icon-column">
+          <span class="check-icon">✔️</span>
+        </div>
+        <div class="content-column">
+          <div class="para">Internet Facility</div>
+        </div>
+      </div>
+      <div class="para-card">
+        <div class="icon-column">
+          <span class="check-icon">✔️</span>
+        </div>
+        <div class="content-column">
+          <div class="para">Newly Arrived Books Exhibition</div>
+        </div>
+      </div>
+      <div class="para-card">
+        <div class="icon-column">
+          <span class="check-icon">✔️</span>
+        </div>
+        <div class="content-column">
+          <div class="para">Inter-Library Loan Facility</div>
+        </div>
+      </div>
+      <div class="para-card">
+        <div class="icon-column">
+          <span class="check-icon">✔️</span>
+        </div>
+        <div class="content-column">
+          <div class="para">Internal Repository Facility</div>
+        </div>
+      </div>
+
+      <h3 style="color: red; font-weight: bolder">Highlights</h3>
+      <br />
+      <div>
+        Computerization of Library Services, Internet Facility for Students,
+        Book Exhibition, OPAC (Online Public Access Catalog).
+      </div>
+      <br />
+      <div class="image-container">
+        <img
+          src="images/VISION MISSION GOALS.webp"
+          alt="Vision, Mission, Goals"
+        />
+      </div>
+    </section>
+
+    <div id="librarian">
+      <div class="identity-card">
+        <div class="card-header">
+          <h3>Librarian</h3>
+        </div>
+        <div class="card-content">
+          <div class="photo-column">
+            <div class="photo">
+              <img src="images/dodamani.jpg" alt="Librarian Photo" />
+            </div>
+          </div>
+          <div class="info-column">
+            <div class="details">
+              <h3 class="name">
+                <span style="color: #e74c3c">Shri. Pashupati Dodamani</span>
+              </h3>
+              <p class="degree">M.L.I.Sc.UGC/NET</p>
+              <!-- <p class="academic-info">
+                Master of Arts in Library Science from XYZ University
+              </p> -->
+
+              <!-- Additional Information (Initially hidden) -->
+              <div class="more-info">
+                <div>
+                  Library is the heart of Education. Well functioning heart
+                  keeps the body healthy and long life. An efficient library
+                  creates healthy educational atmosphere, keeping this view in
+                  mind library acts accordingly.
+                </div>
+                <p>Contact: pashupati@library.com</p>
+              </div>
+
+              <!-- Read More Button -->
+              <button class="read-more-btn">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal20" class="modal">
+      <div class="modal-content4">
+        <span class="close" onclick="closeModal('modal20')">&times;</span>
+        <h3 class="modal-title">Library Staff</h3>
+        <div class="staff-grid">
+          <!-- Column 1 -->
+          <div class="staff-column">
+            <div class="photo-row">
+              <img src="images/dodamani.jpg" alt="Librarian Photo" class="staff-photo" />
+            </div>
+            <div class="name-row">
+              <h4 class="name">Shri. Pashupati Dodamani</h4>
+            </div>
+            <div class="designation-row">
+              <p class="designation">Librarian</p>
+            </div>
+            <div class="designation-row">
+              <h4 class="designation">– M.L.I.Sc.UGC/NET</h4>
+            </div>
+          </div>
+          <!-- Column 2 -->
+          <div class="staff-column">
+            <div class="photo-row">
+              <img src="images/Vinayak.jpg" alt="Librarian Photo" class="staff-photo" />
+            </div>
+            <div class="name-row">
+              <h4 class="name">Shri. Vinayak Parutagale</h4>
+            </div>
+            <div class="designation-row">
+              <p class="designation">Library Assistant</p>
+            </div>
+            <div class="designation-row">
+              <h4 class="designation">– B.Lib.I.Sc M.Lib.I.Sc</h4>
+            </div>
+          </div>
+          <!-- Column 3 -->
+          <div class="staff-column">
+            <div class="photo-row">
+              <img src="images/Rohit.jpg" style="height: 165px; width:140px;"  alt="Librarian Photo" class="staff-photo" />
+            </div>
+            <div class="name-row">
+              <h4 class="name">Shri. Rohit Bhajantri</h4>
+            </div>
+            <div class="designation-row">
+              <p class="designation">Librarian Attender</p>
+            </div>
+            <div class="designation-row">
+              <h4 class="designation">–Peon</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <section id="library-services">
+      <h2>Library Services</h2>
+      <div class="services-cards">
+        <div class="card" id="book-card">
+          <i class="fas fa-book"></i>
+          <h3>Book Detail</h3>
+        </div>
+        <div class="card" id="periodical-card">
+          <i class="fas fa-newspaper"></i>
+          <h3>Periodicals & Journal</h3>
+        </div>
+        <div class="card" id="notice-card">
+          <i class="fas fa-bell"></i>
+          <h3>Notice Board</h3>
+        </div>
+      </div>
+      <div id="content-display">
+        <table id="book-table" style="display: none">
+          <thead style="background-color: rgb(248, 145, 71);">
+            <tr>
+              <th>Grant</th>
+              <th>Total Books</th>
+              <th>Total Titles</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <table id="journal-table" style="display: none">
+          <thead style="background-color: rgb(242, 162, 58);">
+            <tr>
+              <th>Sr. No.</th>
+              <th>Names</th>
+              <th>Periodicity</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="libr">
+        <h3 style="color: red; font-weight:bolder;">BOOKS FACILITIES:</h3> <br>
+       <div> 2 Books will be issued to all the students on Borrowers card for 15 days.</div> <br>
+       <div> 2 Books will be issued on the PSLL scheme for the entire year to the poor and meritorious students.</div><br>
+       <h3 style="color: red; font-weight:bolder;">JOURNALS AND PERIODICALS FACILITY: </h3><br>
+        Journals and periodicals will be issued to the students on demand for home reading for 1-2 days on the production of identity cards.<br><br> 
+        <h3 style="color: red; font-weight:bolder;">REFERENCE SECTION: </h3><br>
+        The reference section will be kept open during library hours.  <br><br>
+        Books, journals, periodicals, and question papers from the previous year will be issued on identity cards for reference. <br><br>
+        <h3 style="color: red; font-weight:bolder;">LIBRARY WORKING HOURS: </h3><br>
+        Generally, the library will be kept open on all working days. The reading hours of the library are ​<br><br>
+        Monday to Friday 08.00 a.m to 06.00 p.m.<br> Saturday 08.00 a.m to 02.00 p.m. <br><br>
+        A special reading room is provided during examinations from 08.00
+        a.m to 08.00 p.m (Except Sundays and Holidays). <br><br>
+        <h3 style="color: red; font-weight:bolder;"> USER ORIENTATION PROGRAMME: </h3><br>
+        The freshers are formally introduced to the library services
+        and facilities at the beginning of every academic year, class-wise about
+        books, journals, periodicals, and others.<br> <br>
+        <h3 style="color: red; font-weight:bolder;">NEW ARRIVALS DISPLAY: </h3><br><br>
+        Some selected titles of new books acquired by the library are displayed in
+        the New Arrivals Display stand for the benefit of users. These books
+        will be on display for at least one week after that they will be made
+        available to borrow. <br><br>
+        <h3 style="color: red; font-weight:bolder;">INTERLIBRARY LOANS: </h3><br>
+        It is not possible for any institution, however rich its resources, to buy all the books published
+        even in a discipline. Hence it is inevitable to depend on other sister
+        organizations to share information sources for the mutual benefit of the users. <br><br>
+        <h3 style="color: red; font-weight:bolder;">INVOLVEMENT AND BEST PRACTICES INITIATED AND ADOPTED:</h3><br>
+        Computerization of all the library resources and services with
+        multilingual integrated software.<br> Preparation of library profile (Annual
+        & for NAAC).<br> More No. of books to poor and meritorious.<br> Extend library
+        Hours during the Examination season. <br>Display of library information. <br>
+        Open access system.<br> Displaying new arrivals of books. <br>Open to
+        non-library members also for reference.<br> Career/Employment services.<br>
+        Display of newspaper clippings.<br> Article Alert Service. <br>Broadband
+        internet facility for free of cost.<br> Discussion forum on user queries
+        regarding library collection development. <br>Preparation of college
+        Handbook.
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+      <h2>Gallery</h2>
+      <div class="gallery-container">
+        <div class="gallery-item">
+          <img src="images/g1.jpg" alt="Gallery Photo 1">
+        </div>
+        <div class="gallery-item">
+          <img src="images/g2.jpg" alt="Gallery Photo 2">
+        </div>
+        <div class="gallery-item">
+          <img src="images/g3.jpeg" alt="Gallery Photo 3">
+        </div>
+        <div class="gallery-item">
+          <img src="images/g4.jpg" alt="Gallery Photo 4">
+        </div>
+        <div class="gallery-item">
+          <img src="images/g5.jpeg" alt="Gallery Photo 5">
+        </div>
+        <div class="gallery-item">
+          <img src="images/g6.jpg" alt="Gallery Photo 6">
+        </div>
+        <div class="gallery-item">
+          <img src="images/g7.jpg" alt="Gallery Photo 6">
+        </div>
+        <div class="gallery-item">
+          <img src="images/g8.jpg" alt="Gallery Photo 6">
+        </div>
+        <div class="gallery-item">
+          <img src="images/g9.jpg" alt="Gallery Photo 6">
+        </div>
+        <div class="gallery-item">
+          <img src="images/g10.jpg" alt="Gallery Photo 6">
+        </div>
+        <div class="gallery-item">
+          <img src="images/g11.jpg" alt="Gallery Photo 6">
+        </div>
+        <div class="gallery-item">
+          <img src="images/g12.jpg" alt="Gallery Photo 6">
+        </div>
+        <!-- Add more gallery-item divs as needed -->
+      </div>
+    </section>
+    
+<!-- Competitive Exam Section -->
+<section id="competitive-exams" class="exams-section">
+  <h2 class="section-title">Competitive Exams</h2>
+  <p class="section-subtitle">Prepare for the exams that shape your future</p>
+
+  <div class="exam-cards">
+      <!-- IAS Exam Card -->
+      <div class="exam-card">
+          <img src="images/upsc.jpeg" alt="IAS Exam" class="exam-icon">
+          <h3 class="exam-title">IAS - Indian Administrative Service</h3>
+          <p class="exam-description">Prepare for the esteemed IAS exams and join the nation’s administrative framework.</p>
+          <button class="learn-more-btn" onclick="openIAS()">Learn More</button>
+      </div>
+
+      <!-- IPS Exam Card -->
+      <div class="exam-card">
+          <img src="images/upsc.jpeg" alt="IPS Exam" class="exam-icon">
+          <h3 class="exam-title">IPS - Indian Police Service</h3>
+          <p class="exam-description">Get ready for the challenging IPS exams and protect and serve the nation.</p>
+          <button class="learn-more-btn" onclick="openIPS()">Learn More</button>
+      </div>
+
+      <!-- Other Exams Card -->
+      <div class="exam-card">
+          <img src="images/kpsc.jpeg" alt="Other Exams" class="exam-icon">
+          <h3 class="exam-title">KPSC - Karnataka Public Service Commission</h3>
+          <p class="exam-description">Get ready for the challenging KPSC exams</p>
+          <button class="learn-more-btn" onclick="openKPSC()">Learn More</button>
+      </div>
+      <div class="exam-card">
+        <img src="images/ibps.png" alt="Other Exams" class="exam-icon">
+        <h3 class="exam-title">Bank Exams</h3>
+        <p class="exam-description">Get ready for the challenging Bank exams</p>
+        <button class="learn-more-btn" onclick="openBANK()">Learn More</button>
+    </div>
+    <div class="exam-card">
+      <img src="images/net.jpeg" alt="Other Exams" class="exam-icon">
+      <h3 class="exam-title">NET Exams</h3>
+      <p class="exam-description">Get ready for the challenging NET exams</p>
+      <button class="learn-more-btn" onclick="openNET()">Learn More</button>
+  </div>
+  <div class="exam-card">
+    <img src="images/rail.png" alt="Other Exams" class="exam-icon">
+    <h3 class="exam-title">Railway Exams</h3>
+    <p class="exam-description">Get ready for the challenging Railway exams</p>
+    <button class="learn-more-btn" onclick="openRAIL()">Learn More</button>
+</div>
+  </div>
+</section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-top">
+        <!-- College Address Section -->
+        <div class="footer-column">
+          <p>Shivanand College Kagwad,<br> KA-591223</p>
+          <hr>
+          <div> <p>Visitor Count: <span id="visitCount" style="color: #e74c3c;">Loading...</span></p></div>
+          <!-- <div> <p style="color: rgb(236, 240, 237);">Designed By-<br> RM</p></div> -->
+        </div>
+       
+       
+        <!-- About Library Section -->
+        <div class="footer-column">
+          <h3>About Library</h3>
+          <hr>
+          <ul>
+            <li><a href="#about">About Library</a></li>
+            <li><a  onclick="openModal('modal20')"> Library Staff</a></li>
+            <li><a href="#services">Brochure</a></li>
+          </ul>
+        </div>
+    
+        <!-- Quick Links Section -->
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <hr>
+          <ul>
+            <li><a  onclick="openModal('modal7')">ebooks</a></li>
+            <li><a href="#about">emagzins</a></li>
+            <li><a  onclick="openModal('modal7')">ejournal</a></li>
+          </ul>
+        </div>
+    
+        <!-- Social Media Section -->
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <hr>
+          <div class="footer-social">
+            <a href="https://facebook.com" target="_blank" class="social-icon">
+              <img src="images/face2.png" alt="Facebook" />
+            </a>
+            <a href="https://twitter.com" target="_blank" class="social-icon">
+              <img src="images/twitter.png" alt="Twitter" />
+            </a>
+            <a href="https://youtube.com" target="_blank" class="social-icon">
+              <img src="images/youtube.png" alt="YouTube" />
+            </a>
+          </div>
+        </div>
+      </div>
+       <!-- Back to Top Button -->
+       <button id="backToTop" class="back-to-top" title="Go to top">
+        &#8679;
+      </button>
+    </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024@Digital Library. All Rights Reserved.</p>
+      </div>
+    </footer>
+    
+    <!-- Modal Structure -->
+    <div id="newspaperModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3>Prospectus</h3>
+        <div class="card-container">
+          <div class="card1">
+            <h4>2021-22</h4>
+          </div>
+          <div class="card1">
+            <h4>2022-23</h4>
+          </div>
+          <div class="card1">
+            <h4>2023-24</h4>
+          </div>
+          <div class="card1">
+           <a href="/"> <h4>2024-25</h4></a>
+          </div>
+          <!-- Add more cards as needed -->
+        </div>
+          <!-- Add more newspaper items here if needed -->
+        </div>
+      </div>
+    </div>
+
+     <!-- Modal Structure -->
+    
+
+    
+    <!-- chatgpt -->
+
+    <!-- ChatGPT Icon -->
+    <!-- ChatGPT Icon with Tooltip -->
+    <div id="chatgpt-icon" onclick="openChatGPT()">
+      <span id="chatgpt-tooltip">Ask me a question</span>
+      <img src="images/chatgpt.png" alt="ChatGPT Icon" id="chatgpt-image" />
+    </div>
+
+    <div id="settings-icon" onclick="toggleSettings()">
+      <img src="images/set2.png" alt="Settings" id="settings-image" />
+    </div>
+
+    <!-- Settings Panel for Color Scheme -->
+    <div id="settings-panel">
+      <h3>Choose a Color Scheme</h3>
+      <div class="color-icon" onclick="changeColor('theme1')">
+        <img src="images/white.png" alt="Theme 1" />
+      </div>
+      <div class="color-icon" onclick="changeColor('theme2')">
+        <img src="images/black.jpeg" alt="Theme 2" />
+      </div>
+      <div class="color-icon" onclick="changeColor('theme3')">
+        <img src="images/blue.png" alt="Theme 3" />
+      </div>
+    </div>
+
+    <script src="js/carousel.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/library_service.js"></script>
+    <script src="js/chatgpt.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/modal.js"></script>
+    <script>
+      // Function to load HTML content into a specific element
+      function loadContent(url, elementId) {
+        fetch(url)
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById(elementId).innerHTML = data;
+          })
+          .catch((error) => console.error("Error loading content:", error));
+      }
+
+      // Load sections on page load
+      window.onload = function () {
+        loadContent("about.html", "about-section");
+        loadContent("digital-hub.html", "digital-hub-section");
+      };
+    </script>
+   
+  <script>
+  // script.js
+
+// Get references to the elements
+const navbarToggle = document.getElementById('navbar-toggle');
+const navbarLinks = document.getElementById('navbar-links');
+
+// Add a click event listener to the hamburger icon
+navbarToggle.addEventListener('click', function() {
+  // Toggle the display of the navbar links
+  if (navbarLinks.style.display === 'flex') {
+    navbarLinks.style.display = 'none'; // Hide the navbar
+  } else {
+    navbarLinks.style.display = 'flex'; // Show the navbar
+  }
+});
+  </script>
+  <script>
+    // Get the current visit count from localStorage (or initialize it if it doesn't exist)
+    let visitCount = localStorage.getItem('visitCount');
+
+    if (!visitCount) {
+      // If no visit count is found, initialize it to 0
+      visitCount = 0;
+    }
+
+    // Increment the visit count
+    visitCount++;
+
+    // Update the visit count in localStorage
+    localStorage.setItem('visitCount', visitCount);
+
+    // Display the updated visit count
+    document.getElementById('visitCount').textContent = visitCount;
+  </script>
+
+  </body>
+</html>

@@ -1,0 +1,425 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(234, 222, 208);
+}
+
+header {
+  /* background: linear-gradient(45deg, #f55c16, #ff9a00);  */
+  /* background: linear-gradient(45deg, #f55c16, #ff9a00); */
+  background: linear-gradient(0deg, #f55c16, #ff9a00); /* Top to bottom gradient */
+
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* Navbar Styling */
+/* General Navbar Styles */
+/* General Navbar Styles */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar li {
+  display: inline-block;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s, font-size 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #1c86f8;
+  transform: scale(1.1);
+  font-size: 20px;
+}
+
+/* Hamburger Icon - Only shown on mobile */
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+  color: white;
+  font-size: 30px;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none; /* Hide the menu by default on mobile */
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    position: absolute;
+    top: 60px; /* Adjust if needed to align with navbar height */
+    left: 0;
+    z-index: 1000;
+    margin-top: 10px;
+  }
+
+  .navbar-toggle {
+    display: block; /* Show hamburger icon on mobile */
+  }
+}
+
+/* Ensure navbar is always visible on desktop */
+@media (min-width: 769px) {
+  .navbar-links {
+    display: flex !important; /* Force navbar to be visible on desktop */
+  }
+}
+
+
+/* Adjust scroll padding */
+#digital-hub {
+  padding-top: 70px;
+}
+html {
+  scroll-padding-top: 70px;
+}
+
+/* Section Styling */
+section {
+  width: 80%;
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+section p {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .navbar ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar a {
+    font-size: 1rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  section p {
+    font-size: 1rem;
+  }
+}
+
+/* College Name Styling */
+.college-name {
+  font-size: 1.0rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0.1rem 0;
+}
+
+.college-subname {
+  font-size: 2.8rem;
+  display: block;
+}
+
+/* Carousel Styling */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 500px;
+  margin: 20px auto;
+  overflow: hidden;
+  background: #333;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill; /* Stretches the image to fit both width and height */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pixel-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  pointer-events: none;
+}
+
+.pixel-box {
+  background-color: #222;
+  opacity: 1;
+  animation: fadeIn 2s ease forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Digital Hub Section */
+#digital-hub {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+}
+
+.resource-icons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  justify-items: center;
+}
+
+.resource-item {
+  transition: transform 0.3s ease;
+}
+
+.resource-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+.resource-item p {
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: bolder;
+}
+
+.resource-item:hover {
+  transform: scale(1.05);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #f9f9f9;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  position: relative;
+}
+.card1 {
+  background-color: #dd6df6; /* Light gray background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 20px;
+  text-align: center;
+  width: 120px; /* Fixed width */
+  min-height: 120px; /* Minimum height */
+  display: flex;
+  align-items: center; /* Center the content vertically */
+  justify-content: center; /* Center the content horizontally */
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: #333; /* Dark gray text */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+.card2 {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 20px;
+  text-align: center;
+  width: 150px; /* Fixed width */
+  min-height: 120px; /* Minimum height */
+  display: flex;
+  align-items: center; /* Center the content vertically */
+  justify-content: center; /* Center the content horizontally */
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: #333; /* Dark gray text */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+.im{
+  height: 50px;
+  width: 150px;
+}
+
+.card1 h4 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Hover effect for cards */
+.card1:hover {
+  transform: translateY(-5px); /* Lift the card */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card1-container {
+    justify-content: center;
+  }
+
+  .card1 {
+    width: 100px; /* Reduce width on smaller screens */
+    min-height: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .card2-container {
+    justify-content: center;
+  }
+
+  .card2 {
+    width: 100px; /* Reduce width on smaller screens */
+    min-height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card1-container {
+    justify-content: space-between;
+  }
+
+  .card1 {
+    width: 80px; /* Further reduce width on very small screens */
+    min-height: 80px;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.modal-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.modal-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.card-container {
+  display: flex;
+  justify-content: space-evenly; /* Evenly space the cards */
+  flex-wrap: wrap; /* Wrap cards to the next line if space runs out */
+  gap: 5px; /* Space between the cards */
+  padding: 20px;
+}
+
+.modal-item i {
+  font-size: 1.5rem;
+  color: #007BFF;
+}
+
+/* Additional Media Queries for Digital Hub on Mobile */
+@media (max-width: 768px) {
+  .resource-icons {
+    grid-template-columns: repeat(3, 1fr); /* Show 3 items per row */
+  }
+
+  .resource-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .resource-item p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .resource-icons {
+    grid-template-columns: repeat(2, 1fr); /* Show 2 items per row */
+  }
+
+  .resource-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .resource-item p {
+    font-size: 10px;
+  }
+}

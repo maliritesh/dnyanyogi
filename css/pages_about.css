@@ -1,0 +1,214 @@
+#about {
+    background-color: white;
+    padding: 50px;
+}
+
+.card-deck {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.card {
+    width: 22%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: beige;
+    margin: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.card-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-text {
+    font-size: 1em;
+}
+
+.bg-primary {
+    background-color: #007bff !important;
+}
+
+.bg-success {
+    background-color: #28a745 !important;
+}
+
+.bg-warning {
+    background-color: #ffc107 !important;
+}
+
+.bg-danger {
+    background-color: #dc3545 !important;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-dark {
+    color: black;
+}
+h4{
+    color: #dc3545;
+}
+
+/* Card styling */
+/* Card styling */
+.para-card {
+    background-color: white;
+    width: 100%;
+    max-width: 100%; /* Ensure it doesn't exceed container width */
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeUp 0.6s ease-out forwards;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+  
+  .para-card:hover {
+    background-color: #007bff; /* blue color */
+    color: white;
+  }
+  
+  /* Icon column styling */
+  .icon-column {
+    flex: 0 0 40px; /* Set fixed width for icon column */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .check-icon {
+    color: white;
+    background-color: rgb(4, 173, 199);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  /* Content column styling */
+  .content-column {
+    flex: 1; /* Full remaining width for content */
+    padding-left: 15px; /* Spacing between icon and content */
+  }
+  
+  /* Animation for fade up */
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Text styling */
+  .para {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Styling for the h2 element */
+/* Styling for the h2 element */
+h2 {
+    position: relative;
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+  
+  /* Stylish underline effect */
+  h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80%; /* Set the underline width permanently */
+    height: 3px;
+    background: linear-gradient(90deg, #007bff, #ff4d4d, #00c851);
+  }
+
+  /* General responsive styling for images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for emphasis */
+}
+
+/* Specific container styling for images */
+.image-container {
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+}
+
+/* Responsive adjustments for mobile view */
+@media (max-width: 768px) {
+  /* Adjust padding for mobile */
+  .image-container {
+      padding: 10px;
+  }
+
+  /* Center and resize image */
+  .image-container img {
+      width: 100%;
+      height: auto;
+  }
+
+  /* Adjust card styling for mobile view */
+  .card {
+      width: 100%; /* Full width on mobile */
+      margin-bottom: 15px;
+  }
+
+  /* Reduce padding in cards for a tighter layout */
+  .para-card {
+      padding: 15px;
+  }
+
+  /* Font and layout adjustments */
+  .card-title, .card-text, h2, h4 {
+      font-size: 1rem; /* Smaller font for mobile */
+  }
+}
+@media (max-width: 768px) {
+  .card-deck {
+      flex-direction: column; /* Stack cards vertically on smaller screens */
+      align-items: center;
+  }
+  .card {
+      width: 100%; /* Full width on mobile */
+      margin: 15px 0; /* Vertical spacing between stacked cards */
+  }
+}
+
+@media (max-width: 768px) {
+  .para-card {
+      flex-direction: column; /* Stack content vertically on smaller screens */
+      text-align: center;
+  }
+  .icon-column {
+      margin-bottom: 10px; /* Add space between icon and content on mobile */
+  }
+}
+  
+  

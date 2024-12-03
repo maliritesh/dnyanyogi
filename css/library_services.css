@@ -1,0 +1,114 @@
+#library-services {
+    text-align: center; /* Center the cards horizontally */
+}
+
+.services-cards {
+    display: flex;
+    justify-content: center; /* Center the cards horizontally */
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    padding: 15px;
+    border: 1px solid #4d4b4b;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.card:hover {
+    background-color: #eaeaea;
+}
+
+#book-card {
+    background-color: #f2d7d5; /* Light pink for books */
+}
+
+#periodical-card {
+    background-color: #d9e1f2; /* Light blue for periodicals */
+}
+
+#notice-card {
+    background-color: #d4edda; /* Light green for notices */
+}
+
+.card i {
+    font-size: 24px; /* Adjust icon size as needed */
+    margin-bottom: 10px; /* Add spacing between icon and text */
+}
+#book-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#book-table th, #book-table td {
+    border: 1px solid #7a1717;
+    padding: 8px;
+    text-align: left;
+}
+
+#book-table th   
+ {
+    background-color: #7da7f3;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+#journal-table {  /* Style the journal table */
+    width: 100%;
+    border-collapse: collapse; /* Remove border between cells */
+}
+
+#journal-table th, #journal-table td {
+    border: 1px solid #9e2e2e;
+    padding: 8px;
+    text-align: left;
+}
+
+#journal-table th {
+    background-color: #f2f2f2;
+}
+
+/* Add zebra striping for alternating row colors (optional) */
+#journal-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#notice-card {
+    background-color: #d4edda; /* Light green for notices */
+    position: relative;
+    overflow: hidden; /* Hide content that overflows */
+}
+
+.notice-content {
+    position: absolute;
+    bottom: -100%; /* Initially position content below the card */
+    width: 100%;
+    transition: bottom 0.5s ease-in-out; /* Smooth upward movement */
+}
+
+#notice-card.show-notice .notice-content {
+    bottom: 0; /* Move the content to the top of the card when visible */
+}
+
+.notice-content ul {
+    padding: 10px;
+    list-style-type: none;
+}
+
+.notice-content ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+.libr{
+    text-align: left;
+    margin-top: 1rem;
+    margin: 20px;
+}
+
